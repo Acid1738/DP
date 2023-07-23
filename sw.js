@@ -3,10 +3,7 @@ const assets = [
   "/",
   "/index.html",
   "/style.css",
-  "/index.js",
-   "/font/ubuntu.ttf",
-  "/audio/sad.mp3",
-  "/audio/clap.mp3"
+  "/index.js"
 ]
 
 self.addEventListener("install", installEvent => {
