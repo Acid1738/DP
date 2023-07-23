@@ -4,13 +4,12 @@ const assets = [
   "/index.html",
   "/style.css",
   "/index.js",
-  "/font/ubuntu.ttf",
-  "/image/192.png",
-  "/image/512.png",
-  "/audio/sad.mp3",
-  "/audio/clap.mp3"
+  "DP/font/ubuntu.ttf",
+  "DP/image/192.png",
+  "DP/image/512.png",
+  "DP/audio/sad.mp3",
+  "DP/audio/clap.mp3"
 ]
-
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
@@ -31,7 +30,7 @@ self.addEventListener("fetch", fetchEvent => {
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
       navigator.serviceWorker
-        .register("/sw.js")
+        .register("DP/sw.js")
         .then(res => console.log("service worker registered"))
         .catch(err => console.log("service worker not registered", err))
     })

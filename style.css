@@ -1,14 +1,13 @@
 
 @font-face {
     font-family: greg;
-    src: url(/font/ubuntu.ttf);
+    src: url(DP/font/ubuntu.ttf);
 }
 
 body {
   color: white;
   background-color: #26282b;
    /* font-family: 'Ubuntu', sans-serif;  */
-  
   font-family: greg; 
   font-weight: 600;
 }
