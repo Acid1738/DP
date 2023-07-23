@@ -4,10 +4,13 @@ const assets = [
   "/index.html",
   "/style.css",
   "/index.js",
-  "/ubuntu.ttf",
-  "/192.svg",
-  "/512.svg"
+  "/font/ubuntu.ttf",
+  "/image/192.png",
+  "/image/512.png",
+  "/audio/sad.mp3",
+  "/audio/clap.mp3"
 ]
+
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
