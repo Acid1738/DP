@@ -1,8 +1,8 @@
 const staticfile = "dp-site-v1"
 const assets = [
   "/DP/index.html",
-  "/style.css",
-  "/index.js"
+  "/DP/style.css",
+  "/DP/index.js"
 ]
 
 self.addEventListener("install", installEvent => {
