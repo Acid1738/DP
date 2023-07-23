@@ -8,7 +8,7 @@ const assets = [
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
     caches.open(staticfile).then(cache => {
-      cache.addAll(assets)
+      cache.addAll(assets); console.log("caching")
     })
   )
 })
