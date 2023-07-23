@@ -1,14 +1,14 @@
 const staticfile = "dp-site-v1"
 const assets = [
   "/",
-  "https://acid1738.github.io/DP/index.html",
-  "https://acid1738.github.io/DP/style.css",
-  "https://acid1738.github.io/DP/index.js",
-  "https://acid1738.github.io/DP/font/ubuntu.ttf",
-  "https://acid1738.github.io/DP/image/192.png",
-  "https://acid1738.github.io/DP/image/512.png",
-  "https://acid1738.github.io/DP/audio/sad.mp3",
-  "https://acid1738.github.io/DP/audio/clap.mp3"
+  "index.html",
+  "style.css",
+  "index.js",
+  "/DP/font/ubuntu.ttf",
+  "/DP/image/192.png",
+  "/DP/image/512.png",
+  "/DP/audio/sad.mp3",
+  "/DP/audio/clap.mp3"
 ]
 
 self.addEventListener("install", installEvent => {
