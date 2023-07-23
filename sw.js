@@ -30,7 +30,7 @@ self.addEventListener("fetch", fetchEvent => {
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
       navigator.serviceWorker
-        .register("/sw.js")
+        .register("https://acid1738.github.io/DP/sw.js")
         .then(res => console.log("service worker registered"))
         .catch(err => console.log("service worker not registered", err))
     })
