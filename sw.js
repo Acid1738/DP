@@ -1,6 +1,5 @@
 const staticfile = "dp-site-v1"
 const assets = [
-  "/",
   "/index.html",
   "/style.css",
   "/index.js"
@@ -9,8 +8,7 @@ const assets = [
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
     caches.open(staticfile).then(cache => {
-      cache.addAll(assets);
-  console.log("assets are being cached")
+      cache.addAll(assets)
     })
   )
 })
