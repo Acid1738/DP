@@ -7,7 +7,6 @@
 body {
   color: white;
   background-color: #26282b;
-   /* font-family: 'Ubuntu', sans-serif;  */
   font-family: greg; 
   font-weight: 600;
 }
@@ -19,7 +18,6 @@ body {
 }
 #popup {
   font-weight: bolder;
-  font-family: "Ubuntu", sans-serif;
   text-align: center;
   background-color: white;
   color: black;
