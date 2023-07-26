@@ -245,7 +245,7 @@ document.getElementById("cancel").addEventListener("click", () => {
 });
 
 function PlaySound() {
-  if (myIndex == 0 || myIndex == 1) {
+  if (myIndex == 1) {
     if (marks[2] > 39 ) {
       document.getElementById("clap").play();
     } else {
@@ -253,7 +253,7 @@ function PlaySound() {
     }
   }
  
-  if (myIndex == 2 || myIndex == 4) {
+  if (myIndex == 4) {
     if (marks[5] > 39 ) {
       document.getElementById("clap").play();
     } else {
@@ -261,7 +261,7 @@ function PlaySound() {
     }
   }
 
-  if (myIndex == 6 || myIndex == 7) {
+  if (myIndex == 7) {
     if (marks[8] > 39 ) {
       document.getElementById("clap").play();
     } else {
@@ -269,7 +269,7 @@ function PlaySound() {
     }
   }
 
-  if (myIndex == 9 || myIndex == 10) {
+  if (myIndex == 10) {
     if (marks[11] > 39 ) {
       document.getElementById("clap").play();
     } else {
