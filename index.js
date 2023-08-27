@@ -295,8 +295,14 @@ function success(pos) {
 
 
 document.getElementById("lokashin").addEventListener("click", () => {
-  navigator.geolocation.getCurrentPosition(success, options);
+  navigator.geolocation.getCurrentPosition(success, error, options);
 })
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+
 
 
 
