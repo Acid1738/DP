@@ -278,3 +278,34 @@ function PlaySound() {
   }
 
 }
+
+const options = {
+  enableHighAccuracy: true,
+  timeout: 60000,
+  maximumAge: 10000,
+};
+
+
+function success(pos) {
+  const crd = pos.coords;
+
+
+  document.getElementById("correct").innerText = 'latitude' + crd.latitude + " and " + crd.longitude;
+}
+
+
+document.getElementById("lokashin").addEventListener("click", () => {
+  navigator.geolocation.getCurrentPosition(success, options);
+})
+
+
+
+
+
+
+
+
+
+
+
+
