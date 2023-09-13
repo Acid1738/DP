@@ -1,7 +1,7 @@
 let marks;
 let mark;
 let MarkBar = document.getElementsByClassName("mark-bar");
-marks = JSON.parse(localStorage.getItem("marks"));
+let marks = JSON.parse(localStorage.getItem("marks"));
 let state = document.getElementsByClassName("statement");
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
@@ -58,7 +58,7 @@ MarknColor();
 
 //add marks and color bars
 function MarknColor() {
-  for (i = 0; i < marks.length; i++) {
+  for ( let i = 0; i < marks.length; i++) {
     mark = marks[i];
     MarkBar[i].innerText = mark;
     MarkBar[i].style.width = `${mark}%`;
