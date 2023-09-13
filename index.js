@@ -4,6 +4,44 @@ let MarkBar = document.getElementsByClassName("mark-bar");
 marks = JSON.parse(localStorage.getItem("marks"));
 let state = document.getElementsByClassName("statement");
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+import {
+  getFirestore,
+  getDoc,
+  doc,
+  setDoc,
+  updateDoc,
+  onSnapshot,
+  query,
+  collection,
+  where,
+} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCrcPD96myX3yZbnZ4NYc4rdI6roMrKF3s",
+  authDomain: "delivery-app-742c0.firebaseapp.com",
+  projectId: "delivery-app-742c0",
+  storageBucket: "delivery-app-742c0.appspot.com",
+  messagingSenderId: "609467816537",
+  appId: "1:609467816537:web:4b4430deb1d0b8b61a6f48",
+  databaseURL: "https://delivery-app-742c0-default-rtdb.firebaseio.com"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const unsub = onSnapshot(doc(db, "notification", "push"), (doc) => {
+  new Notification(doc.data().heading ,{
+    body: doc.data().body,
+    
+  });
+  console.log(doc.data());
+});
+
+
+
+
 if (marks === null) {
   marks = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 } 
