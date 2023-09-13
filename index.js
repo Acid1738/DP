@@ -1,7 +1,7 @@
 let marks;
 let mark;
 let MarkBar = document.getElementsByClassName("mark-bar");
-let marks = JSON.parse(localStorage.getItem("marks"));
+    marks = JSON.parse(localStorage.getItem("marks"));
 let state = document.getElementsByClassName("statement");
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
