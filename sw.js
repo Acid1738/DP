@@ -34,3 +34,20 @@ self.addEventListener("fetch", fetchEvent => {
         .catch(err => console.log("service worker not registered", err))
     })
   }
+
+function showNotification() {
+  Notification.requestPermission().then((result) => {
+    if (result === "granted") {
+      navigator.serviceWorker.ready.then((registration) => {
+        registration.showNotification("Vibration Sample", {
+          body: "Buzz! Buzz!",
+          vibrate: [200, 100, 200, 100, 200, 100, 200],
+          tag: "vibration-sample",
+        });
+      });
+    }
+  });
+}
+ showNotification()
+
+
