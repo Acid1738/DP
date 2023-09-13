@@ -31,22 +31,34 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
- document.getElementById("perm").addEventListener("click", () => {
-    console.log("Requesting permission...");
-    Notification.requestPermission().then((permission) => {
-      if (permission === "granted") {
-
-        const unsub = onSnapshot(doc(db, "notification", "push"), (doc) => {
-          new Notification(doc.data().heading ,{
-            body: doc.data().body,
-            
-          });
-          console.log(doc.data());
+document.getElementById("perm").addEventListener("click", () => {
+  Notification.requestPermission()
+    .then((result) => {
+      if (result === "granted") {
+        document.getElementById("console").innerText += "+notif granted+";
+        navigator.serviceWorker.ready.then((registration) => {
+          document.getElementById("console").innerText +=
+            "+should dhow notiffnow+";
+          registration
+            .showNotification("Vibration Sample", {
+              body: "Buzz! Buzz!",
+              vibrate: [200, 100, 200, 100, 200, 100, 200],
+              tag: "vibration-sample",
+            })
+            .catch((err) => {
+              document.getElementById("console").innerText +=
+                "+should nto show notif" + err + "thats all+";
+            });
         });
+      } else {
+        document.getElementById("console").innerText += "+notif not granted+";
       }
+    })
+    .catch((err) => {
+      document.getElementById("console").innerText +=
+        "+could nto show request perm" + err + "thats all+";
     });
- })
-
+});
 
 
 
