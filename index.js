@@ -31,13 +31,21 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const unsub = onSnapshot(doc(db, "notification", "push"), (doc) => {
-  new Notification(doc.data().heading ,{
-    body: doc.data().body,
-    
-  });
-  console.log(doc.data());
-});
+ document.getElementById("perm").addEventListener("click", () => {
+    console.log("Requesting permission...");
+    Notification.requestPermission().then((permission) => {
+      if (permission === "granted") {
+
+        const unsub = onSnapshot(doc(db, "notification", "push"), (doc) => {
+          new Notification(doc.data().heading ,{
+            body: doc.data().body,
+            
+          });
+          console.log(doc.data());
+        });
+      }
+    });
+ })
 
 
 
