@@ -36,19 +36,18 @@ document.getElementById("perm").addEventListener("click", () => {
     .then((result) => {
       if (result === "granted") {
         document.getElementById("console").innerText += "+notif granted+";
-        navigator.serviceWorker.ready.then((registration) => {
+        navigator.serviceWorker.ready.then(() => {
           document.getElementById("console").innerText +=
-            "+should dhow notiffnow+";
-          registration
-            .showNotification("Vibration Sample", {
-              body: "Buzz! Buzz!",
-              vibrate: [200, 100, 200, 100, 200, 100, 200],
-              tag: "vibration-sample",
-            })
-            .catch((err) => {
+            "+should show notif now+";
+          const unsub = onSnapshot(doc(db, "notification", "push"), (doc) => {
+            new Notification(doc.data().heading, {
+              body: doc.data().body,
+            }).catch((err) => {
               document.getElementById("console").innerText +=
-                "+should nto show notif" + err + "thats all+";
+                "+could nto show request perm" + err + "thats all+";
             });
+            console.log(doc.data());
+          });
         });
       } else {
         document.getElementById("console").innerText += "+notif not granted+";
