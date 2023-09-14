@@ -36,6 +36,19 @@ let notifBody;
 const unsub = onSnapshot(doc(db, "notification", "push"), (doc) => {
   notifHead = doc.data().heading;
   notifBody = doc.data().body;
+  navigator.serviceWorker.ready.then((registration) => {
+    document.getElementById("console").innerText +=
+      "+should show notif now+";
+    registration
+      .showNotification(notifHead, {
+        body: notifBody,
+        vibrate: [200, 100, 200, 100, 200, 100, 200],
+      })
+      .catch((err) => {
+        document.getElementById("console").innerText +=
+          "+should not show notif" + err + "thats all+";
+      });
+  });
 });
 
 document.getElementById("perm").addEventListener("click", () => {
