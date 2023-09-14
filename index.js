@@ -42,10 +42,7 @@ document.getElementById("perm").addEventListener("click", () => {
           const unsub = onSnapshot(doc(db, "notification", "push"), (doc) => {
             new Notification(doc.data().heading, {
               body: doc.data().body,
-            }).catch((err) => {
-              document.getElementById("console").innerText +=
-                "+could nto show request perm" + err + "thats all+";
-            });
+            })
             console.log(doc.data());
           });
         });
