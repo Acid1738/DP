@@ -31,20 +31,30 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+let notifHead;
+let notifBody;
+const unsub = onSnapshot(doc(db, "notification", "push"), (doc) => {
+  notifHead = doc.data().heading;
+  notifBody = doc.data().body;
+});
+
 document.getElementById("perm").addEventListener("click", () => {
   Notification.requestPermission()
     .then((result) => {
       if (result === "granted") {
         document.getElementById("console").innerText += "+notif granted+";
-        navigator.serviceWorker.ready.then(() => {
+        navigator.serviceWorker.ready.then((registration) => {
           document.getElementById("console").innerText +=
             "+should show notif now+";
-          const unsub = onSnapshot(doc(db, "notification", "push"), (doc) => {
-            new Notification(doc.data().heading, {
-              body: doc.data().body,
+          registration
+            .showNotification(notifHead, {
+              body: notifBody,
+              vibrate: [200, 100, 200, 100, 200, 100, 200],
             })
-            console.log(doc.data());
-          });
+            .catch((err) => {
+              document.getElementById("console").innerText +=
+                "+should not show notif" + err + "thats all+";
+            });
         });
       } else {
         document.getElementById("console").innerText += "+notif not granted+";
@@ -52,7 +62,7 @@ document.getElementById("perm").addEventListener("click", () => {
     })
     .catch((err) => {
       document.getElementById("console").innerText +=
-        "+could nto show request perm" + err + "thats all+";
+        "+could not show request perm" + err + "thats all+";
     });
 });
 
