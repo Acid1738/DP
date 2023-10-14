@@ -1,19 +1,18 @@
 const staticfile = "dp-site-v1"
 const assets = [
-  "/DP/",
-  "/DP/index.html",
-  "/DP/style.css",
-  "/DP/index.js",
-    "/DP/font/ubuntu.ttf",
-  "/DP/audio/sad.mp3",
-  "/DP/audio/clap.mp3"
+  "/",
+  "/index.html",
+  "/style.css",
+  "/refact.js",
+  "/audio/sad.mp3",
+  "/audio/clap.mp3"
 ]
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
     caches.open(staticfile).then(cache => {
-      console.log("caching");
-      cache.addAll(assets)
+      cache.addAll(assets);
+      console.log('we tired caching')
     })
   )
 })
@@ -25,16 +24,3 @@ self.addEventListener("fetch", fetchEvent => {
       })
     )
   })
-
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function() {
-      navigator.serviceWorker
-        .register("https://acid1738.github.io/DP/sw.js")
-        .then(res => console.log("service worker registered"))
-        .catch(err => console.log("service worker not registered", err))
-    })
-  }
-
-
-
-

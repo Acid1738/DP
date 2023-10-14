@@ -8,7 +8,6 @@
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="style.css" />
 		<script defer src="refact.js"></script>
-		<script src="sw.js"></script> 
 		<meta name="theme-color" content="26282b" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>DP</title>
@@ -28,7 +27,6 @@
 		<div class="head"><h1>DP Calculator</h1></div>
 
 		<section id="faculty">
-
 			<div class="subject" data-subject="ie">
 				<h2>Industrial Electronics</h2>
 
@@ -156,6 +154,17 @@
 
 		<audio id="clap" src="/audio/clap.mp3"></audio>
 		<audio id="sad" src="/audio/sad.mp3"></audio>
+		
+		<script>
+			if ('serviceWorker' in navigator) {
+				console.log('we have a sw');
+				window.addEventListener('load', function () {
+					navigator.serviceWorker
+						.register('sw.js')
+						.then((res) => console.log('service worker registered'))
+						.catch((err) => console.log('service worker not registered', err));
+				});
+			}
+		</script>
 	</body>
 </html>
-

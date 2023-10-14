@@ -9,7 +9,6 @@ if (!localStorage.getItem('maths')) {
 	localStorage.setItem('maths', '[0,0,0]');
 }
 
-
 //when changing marks
 document.body.addEventListener('click', (event) => {
 	let el = event.target;
@@ -48,18 +47,19 @@ document.body.addEventListener('click', (event) => {
 		marks[1].innerText = storemarks[1];
 		marks[2].innerText = storemarks[2];
 
-        MarknColor();
+		MarknColor();
 
-        if (j === 1) {
-            if (marks[2] > 39 ) {
-                document.getElementById("clap").play();
-              } else {
-                document.getElementById("sad").play();
-              }
-        }
+		if (j === 1) {
+			if (marks[2] > 39) {
+				document.getElementById('clap').play();
+			} else {
+				document.getElementById('sad').play();
+			}
+		}
 
 		//close pop up
 		document.getElementById('popup').style.display = 'none';
+		document.getElementById('mark-enter').value = '';
 	}
 
 	if (el.id === 'cancel') {
@@ -67,19 +67,18 @@ document.body.addEventListener('click', (event) => {
 	}
 });
 
-
 function MarknColor() {
-    let MarkBar = document.body.querySelectorAll('.mark-bar');
+	let tj = 0;
+	let MarkBar = document.body.querySelectorAll('.mark-bar');
 	for (i = 0; i < MarkBar.length; i++) {
-			
-        //hide 0s
+		//hide 0s
 		if (MarkBar[i].innerText === '0') {
 			MarkBar[i].style.color = 'white';
 		} else {
 			MarkBar[i].style.color = 'black';
 		}
-    //color the bars
-    let mark = MarkBar[i].innerText;
+		//color the bars
+		let mark = MarkBar[i].innerText;
 		MarkBar[i].style.width = `${mark}%`;
 		if (mark > 79) {
 			MarkBar[i].style.backgroundColor = 'green';
@@ -88,24 +87,32 @@ function MarknColor() {
 		} else {
 			MarkBar[i].style.backgroundColor = 'orange';
 		}
+		tj += 1;
+
+		if (tj % 3 === 0) {
+			if (mark < 40) {
+				MarkBar[i].style.backgroundColor = 'red';
+			} else {
+				MarkBar[i].style.backgroundColor = 'green';
+			}
+		}
+	}}
+
+	let t = -1;
+	function PrintMarks() {
+		let subs = ['ie', 'maths', 'powers', 'technics'];
+		let everybar = document.body.querySelectorAll('.mark-bar');
+
+		for (let i = 0; i < 4; i++) {
+			let sos = JSON.parse(localStorage.getItem(subs[i]));
+
+			for (let k = 0; k < 3; k++) {
+				t += 1;
+				everybar[t].innerText = sos[k];
+			}
+		}
 	}
-}
- 
-let t =-1;
-function PrintMarks() {
-let subs = ['ie', 'maths' , 'powers' , 'technics'];
-let everybar = document.body.querySelectorAll('.mark-bar')
 
- for ( let i = 0 ; i < 4 ; i++ ) {
-    let sos =  JSON.parse(localStorage.getItem(subs[i]));
 
-    for (let k = 0 ; k < 3 ; k++) {
-        t += 1;
-        everybar[t].innerText = sos[k];
-    }
- }
-}
-
-PrintMarks()
+PrintMarks();
 MarknColor();
-
