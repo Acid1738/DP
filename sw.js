@@ -20,12 +20,15 @@ if ('serviceWorker' in navigator) {
 }
 
 self.addEventListener('install', (installEvent) => {
+	console.log("installing")
   self.skipWaiting();
 	installEvent.waitUntil(
 		caches.open(staticfile).then((cache) => {
-			cache.addAll(assets).catch((error) => {consol.log("we had an oopsie dosie" , error)});
+			cache.addAll(assets)
 			console.log('we tired caching');
-		})
+		}).catch((error) => {
+			console.log("could not cache because", error)
+		}).then( console.log("we cached succsefully"))
 	);
 });
 
