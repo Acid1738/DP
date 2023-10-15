@@ -1,13 +1,13 @@
 const staticfile = 'dp-site-v1';
 const assets = [
-	'/index.html',
-	'/style.css',
-	'/refact.js',
-	'/audio/sad.mp3',
-	'/clap.mp3',
-	'/manifest.json',
-	'/font/ubuntu.ttf',
-	'/sw.js',
+	'./index.html',
+	'./style.css',
+	'./refact.js',
+	'./audio/sad.mp3',
+	'./clap.mp3',
+	'./manifest.json',
+	'./font/ubuntu.ttf',
+	'./sw.js',
 ];
 
 if ('serviceWorker' in navigator) {
@@ -23,7 +23,7 @@ self.addEventListener('install', (installEvent) => {
   self.skipWaiting();
 	installEvent.waitUntil(
 		caches.open(staticfile).then((cache) => {
-			cache.addAll(assets);
+			cache.addAll(assets).catch((error) => {consol.log("we had an oopsie dosie" , error)});
 			console.log('we tired caching');
 		})
 	);
