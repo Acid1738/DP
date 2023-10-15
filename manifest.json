@@ -28,7 +28,7 @@
       "sizes": "128x128"
     },
     {
-      "src": "/image/144.svg",
+      "src": "./image/144.svg",
       "type": "image/png",
       "sizes": "144x144"
     },

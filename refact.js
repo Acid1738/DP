@@ -52,7 +52,7 @@ document.body.addEventListener('click', (event) => {
 		MarknColor();
 
 		if (j === 1) {
-			if (marks[2] > 39) {
+			if (marks[2].innerText > 39) {
 				document.getElementById('clap').play();
 			} else {
 				document.getElementById('sad').play();
