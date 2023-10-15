@@ -1,5 +1,6 @@
 const staticfile = 'dp-site-v1';
 const assets = [
+	'./',
 	'./index.html',
 	'./style.css',
 	'./refact.js',
