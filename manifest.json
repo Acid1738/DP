@@ -8,15 +8,55 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/image/192.png",
+      "src": "/image/32.svg",
+      "type": "image/png",
+      "sizes": "32x32"
+    }, 
+     {
+      "src": "/image/96.svg",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/image/120.svg",
+      "type": "image",
+      "sizes": "120x120"
+    },
+    {
+      "src": "/image/128.svg",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/image/144.svg",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/image/152.svg",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/image/180.svg",
+      "type": "image",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/image/192.svg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/image/512.png",
-      "type": "image/png",
+      "src": "/image/384.svg",
+      "type": "image",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/image/512.svg",
+      "type": "svg",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ]
 }

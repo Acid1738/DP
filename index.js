@@ -1,5 +1,6 @@
 let marks;
 let mark;
+let statement;
 let MarkBar = document.getElementsByClassName("mark-bar");
 marks = JSON.parse(localStorage.getItem("marks"));
 let state = document.getElementsByClassName("statement");
@@ -15,6 +16,11 @@ function MarknColor() {
   for (i = 0; i < marks.length; i++) {
     mark = marks[i];
     MarkBar[i].innerText = mark;
+       if (MarkBar[i].innerText === "0") {
+      MarkBar[i].style.color = "white";
+    } else {
+      MarkBar[i].style.color = "black";
+    }
     MarkBar[i].style.width = `${mark}%`;
     if (mark > 79) {
       MarkBar[i].style.backgroundColor = "green";
@@ -232,6 +238,7 @@ document.getElementById("save").addEventListener("click", () => {
   marks[5] = Math.round(marks[3] * 0.3 + marks[4] * 0.7);
   marks[8] = Math.round(marks[6] * 0.3 + marks[7] * 0.7);
   marks[11] = Math.round(marks[9] * 0.3 + marks[10] * 0.7);
+  document.getElementById("mark-enter").value = "";
 
   localStorage.setItem("marks", JSON.stringify(marks));
   MarknColor();
@@ -242,6 +249,7 @@ document.getElementById("save").addEventListener("click", () => {
 //cancel
 document.getElementById("cancel").addEventListener("click", () => {
   PopUp.style.display = "none";
+  document.getElementById("mark-enter").value = "";
 });
 
 function PlaySound() {
@@ -251,7 +259,7 @@ function PlaySound() {
     } else {
       document.getElementById("sad").play();
     }
-  }
+  }  
  
   if (myIndex == 2 || myIndex == 4) {
     if (marks[5] > 39 ) {

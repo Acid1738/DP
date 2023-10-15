@@ -1,141 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="DP/image/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="DP/image/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="DP/image/favicon-32x32.png">
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="index.js"></script>
-    <script src="sw.js"></script>
-    <meta name="theme-color" content="26282b" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DP</title>
-  </head>
+	<head>
+		<link rel="manifest" href="manifest.json" />
+		<link rel="apple-touch-icon" href="/image/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png" />
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="refact.js"></script>
+		<script src="sw.js"></script>
+		<meta name="theme-color" content="26282b" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DP</title>
+	</head>
 
-  <body>
-    <div id="popup">
-      <div id="prompt">Enter your mark</div>
-      <br />
-      <input type="number" onfocus="this.value=''" id="mark-enter" /> <br />
-      <div id="cancel">cancel</div>
-      <div id="save">save</div>
-    </div>
+	<body>
+		<div id="popup">
+			<div id="prompt">enter your percentage</div>
+			<br />
+			<input type="number" id="mark-enter" placeholder="%" /> <br />
+			<div style="padding: 5%">
+				<div id="cancel">cancel</div>
+				<div id="save">save</div>
+			</div>
+		</div>
 
-    <div class="head"><h1>DP Calculator</h1></div>
+		<div class="head"><h1>DP Calculator</h1></div>
 
-    <section id="faculty">
-      <div class="subject-1">
-        <h3>Mathematics</h3>
+		<section id="faculty">
+			<div class="subject" data-subject="ie">
+				<h2>Industrial Electronics</h2>
 
-        <p>Test 1</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
+				<div data-test="1">
+					<p>Test 1</p>
+					<div class="main-bar">
+						<div class="test-bkg">
+							<div class="mark-bar"></div>
+						</div>
+					</div>
+				</div>
 
-        <p>Test 2</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
+				<div data-test="2">
+					<p>Test 2</p>
+					<div class="main-bar">
+						<div class="test-bkg">
+							<div class="mark-bar"></div>
+						</div>
+					</div>
+				</div>
 
-        <p>Due Performance (DP)</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
-        <br />
-        <div class="statement"></div>
-      </div>
+				<p>Due Performance (DP)</p>
+				<div class="main-bar">
+					<div class="test-bkg">
+						<div class="mark-bar"></div>
+					</div>
+				</div>
+				<br />
+				<div class="statement"></div>
+			</div>
 
-      <div class="subject-2">
-        <h3>Engineering Sciences</h3>
+			<div class="subject" data-subject="maths">
+				<h2>Mathematics</h2>
 
-        <p>Test 1</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
+				<div data-test="1">
+					<p>Test 1</p>
+					<div class="main-bar">
+						<div class="test-bkg">
+							<div class="mark-bar"></div>
+						</div>
+					</div>
+				</div>
 
-        <p>Test 2</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
+				<div data-test="2">
+					<p>Test 2</p>
+					<div class="main-bar">
+						<div class="test-bkg">
+							<div class="mark-bar"></div>
+						</div>
+					</div>
+				</div>
 
-        <p>Due Performance (DP)</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
-        <br />
-        <div class="statement"></div>
-      </div>
+				<p>Due Performance (DP)</p>
+				<div class="main-bar">
+					<div class="test-bkg">
+						<div class="mark-bar"></div>
+					</div>
+				</div>
+				<br />
+				<div class="statement"></div>
+			</div>
 
-      <div class="subject-3">
-        <h3>Electrotechnics</h3>
+			<div class="subject" data-subject="powers">
+				<h2>Power Machines</h2>
 
-        <p>Test 1</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
+				<div data-test="1">
+					<p>Test 1</p>
+					<div class="main-bar">
+						<div class="test-bkg">
+							<div class="mark-bar"></div>
+						</div>
+					</div>
+				</div>
 
-        <p>Test 2</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
+				<div data-test="2">
+					<p>Test 2</p>
+					<div class="main-bar">
+						<div class="test-bkg">
+							<div class="mark-bar"></div>
+						</div>
+					</div>
+				</div>
 
-        <p>Due Performance (DP)</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
-        <br />
-        <div class="statement"></div>
-      </div>
+				<p>Due Performance (DP)</p>
+				<div class="main-bar">
+					<div class="test-bkg">
+						<div class="mark-bar"></div>
+					</div>
+				</div>
+				<br />
+				<div class="statement"></div>
+			</div>
 
-      <div class="subject-4">
-        <h3>Industrial Electronics</h3>
+			<div class="subject" data-subject="technics">
+				<h2>Electrotechnics</h2>
 
-        <p>Test 1</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
+				<div data-test="1">
+					<p>Test 1</p>
+					<div class="main-bar">
+						<div class="test-bkg">
+							<div class="mark-bar"></div>
+						</div>
+					</div>
+				</div>
 
-        <p>Test 2</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
+				<div data-test="2">
+					<p>Test 2</p>
+					<div class="main-bar">
+						<div class="test-bkg">
+							<div class="mark-bar"></div>
+						</div>
+					</div>
+				</div>
 
-        <p>Due Performance (DP)</p>
-        <div class="main-bar">
-          <div class="test-bkg">
-            <div class="mark-bar"></div>
-          </div>
-        </div>
-        <br />
-        <div class="statement"></div>
-      </div>
-    </section>
+				<p>Due Performance (DP)</p>
+				<div class="main-bar">
+					<div class="test-bkg">
+						<div class="mark-bar"></div>
+					</div>
+				</div>
+				<br />
+				<div class="statement"></div>
+			</div>
+		</section>
 
-    <audio id="clap" src="DP/audio/clap.mp3"></audio>
-    <audio id="sad" src="DP/audio/sad.mp3"></audio>
-  </body>
+		<audio id="clap" src="./audio/clap.mp3"></audio>
+		<audio id="sad" src="./audio/sad.mp3"></audio>
+
+
+	</body>
 </html>
