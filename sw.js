@@ -8,9 +8,6 @@ const assets = [
 	'/manifest.json',
 	'/font/ubuntu.ttf',
 	'/sw.js',
-  '/image/favicon-32x32.png',
-  '/image/favicon-16x16.png',
-  '/image/144.svg'
 ];
 
 if ('serviceWorker' in navigator) {
