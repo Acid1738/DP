@@ -1,0 +1,263 @@
+[
+  {
+    "catergory": "breakfast",
+    "food": [
+      {
+        "name": "Ekasi Breakfast",
+        "description": " 2 Eggs,chicken strips, beef sausage, chips and toast ",
+        "image": "/picture/placeholder.png",
+        "price": "R90",
+        "rating": "4.6"
+      }
+    ]
+  },
+  {
+    "catergory": "chicken",
+    "food": [
+      {
+        "name": "1/4 Chicken",
+        "description": " A quater of a chicken flam grilled with our secret marinade ",
+        "image": "/picture/placeholder.png",
+        "price": "R39",
+        "rating": "2.2"
+      },
+      {
+        "name": "1/4 Chicken with Chips",
+        "description": "A quater of a chicken flam grilled with our secret marinade, with a side of chips ",
+        "image": "/picture/placeholder.png",
+        "price": "R45",
+        "rating": "2.4"
+      },
+      {
+        "name": "1/2 Chicken",
+        "description": " Half a chicken flam grilled with our secret marinade",
+        "image": "/picture/placeholder.png",
+        "price": "R60",
+        "rating": "2.2"
+      },
+      {
+        "name": "1/2 Chicken & Chips",
+        "description": " Half a chicken flam grilled with our secret marinade, with a side of chips",
+        "image": "/picture/placeholder.png",
+        "price": "R70",
+        "rating": "0.2"
+      },
+      {
+        "name": "Full Chicken",
+        "description": " Full chicken flame grilled with our secret marinade",
+        "image": "/picture/placeholder.png",
+        "price": "R115",
+        "rating": "0.7"
+      },
+      {
+        "name": "Full Chicken & Chips",
+        "description": " Full chicken flam grilled with our secret marinade, with a side of chips ",
+        "image": "/picture/placeholder.png",
+        "price": "R135",
+        "rating": "4.7"
+      }
+    ]
+  },
+  {
+    "catergory": "family meal",
+    "food": [
+      {
+        "name": "Kasi Fam",
+        "description": " Full Chicken with large chips, 5 Rolls & 2L Drinks ",
+        "image": "/picture/placeholder.png",
+        "price": "R190",
+        "rating": "1.2"
+      }
+    ]
+  },
+  {
+    "catergory": "strips",
+    "food": [
+      {
+        "name": "Spicy Chicken Strips",
+        "description": "spicy chicken strips served with rice",
+        "image": "/picture/placeholder.png",
+        "price": "R40",
+        "rating": "3.1"
+      }
+    ]
+  },
+  {
+    "catergory": "wraps",
+    "food": [
+      {
+        "name": "Chicken Wrap",
+        "description": " chicken wrap with chips ",
+        "image": "/picture/placeholder.png",
+        "price": "R60",
+        "rating": "1.6"
+      }
+    ]
+  },
+  {
+    "catergory": "wings",
+    "food": [
+      {
+        "name": "5 Kasi Wings",
+        "description": " 5 wings ",
+        "image": "/picture/placeholder.png",
+        "price": "R30",
+        "rating": "3.3"
+      },
+      {
+        "name": "10 Kasi Wings",
+        "description": " 10 wings ",
+        "image": "/picture/placeholder.png",
+        "price": "R60",
+        "rating": "0.2"
+      },
+      {
+        "name": "5 Kasi Wings with Chips",
+        "description": " 5 wings with chips ",
+        "image": "/picture/placeholder.png",
+        "price": "R35",
+        "rating": "0.4"
+      },
+      {
+        "name": "6 Kasi Wings with Chips",
+        "description": " 6 wings with chips ",
+        "image": "/picture/placeholder.png",
+        "price": "R40",
+        "rating": "3.2"
+      }
+    ]
+  }, {
+    "catergory": "tramazzini",
+    "food":[
+        {
+            "name": "Chicken Tramazzini",
+            "description":"chicken tramazzini ",
+            "image": "/picture/placeholder.png",
+            "price": "R65",
+            "rating": "3.3"
+        },
+    
+        {
+            "name": "Beef Tramazzini",
+            "description":" beef tramazzini ",
+            "image": "/picture/placeholder.png",
+            "price": "R65",
+            "rating": "0.4"
+        }
+    ]
+  },
+  {
+    "catergory": "wors",
+    "food": [
+        {
+            "name": "Wors Roll ",
+            "description":"Wors Roll with Chips",
+            "image": "/picture/placeholder.png",
+            "price": "R45",
+            "rating": "4.4"
+        }
+    ]
+  }, {
+    "catergory": "burgers",
+    "food": [
+        {
+            "name": "Chicken Burger",
+            "description":" Chicken Burger with Chips ",
+            "image": "/picture/placeholder.png",
+            "price": "R90",
+            "rating": "1.3"
+        },
+    
+        {
+            "name": "Beef Burger",
+            "description":" beef burger with chips ",
+            "image": "/picture/placeholder.png",
+            "price": "R55",
+            "rating": "3.5"
+        }
+    ]
+  }, {
+    "catergory": "ribs",
+    "food": [
+        {
+            "name": "Ribs",
+            "description":" Juicy Ribs ",
+            "image": "/picture/placeholder.png",
+            "price": "R80",
+            "rating": "4.6"
+        },
+    
+        {
+            "name": "Ribs with Chips",
+            "description":" Ribs with chips ",
+            "image": "/picture/placeholder.png",
+            "price": "R90",
+            "rating": "3.8"
+        }
+    ]
+  }, {
+    "catergory": "pizza",
+    "food": [
+        {
+            "name": "BBQ Chicken Pizza",
+            "description":" bbq chicken pizza ",
+            "image": "/picture/placeholder.png",
+            "price": "R90",
+            "rating": "3.6"
+        },
+    
+        {
+            "name": "Smoky Beef Pizza",
+            "description":" beef pizza ",
+            "image": "/picture/placeholder.png",
+            "price": "R95",
+            "rating": "3.5"
+        }
+    ]
+  }, {
+    "catergory": "sandwhiches",
+    "food":[
+        {
+            "name": "Chikcne sand which",
+            "description":" chicken sandwich and chips ",
+            "image": "/picture/placeholder.png",
+            "price": "R50",
+            "rating": "1.1"
+        },
+    
+        {
+            "name": "Beef sandwhich",
+            "description":" beef & chips ",
+            "image": "/picture/placeholder.png",
+            "price": "R55",
+            "rating": "1.4"
+        }
+    ]
+  },{
+    "catergory": "drinks",
+    "food": [
+        {
+          "name": "Can",
+          "description": " refreshing drink",
+          "image": "/picture/placeholder.png",
+          "price": "R15",
+          "rating": "3.9"
+        },
+      
+        {
+          "name": "1.5L",
+          "description": " refreshing drink",
+          "image": "/picture/placeholder.png",
+          "price": "R22",
+          "rating": "0.7"
+        },
+        {
+          "name": "2L",
+          "description": " refreshing drink",
+          "image": "/picture/placeholder.png",
+          "price": "R32",
+          "rating": "0.8"
+        }
+      ]
+  }
+]
