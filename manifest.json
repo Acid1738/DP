@@ -53,8 +53,8 @@
       "sizes": "384x384"
     },
     {
-      "src": "/image/512.svg",
-      "type": "svg",
+      "src": "/image/512.png",
+      "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
     }
