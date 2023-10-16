@@ -21,8 +21,6 @@ if ('serviceWorker' in navigator) {
 }
 
 self.addEventListener('install', (installEvent) => {
-	console.log("installing")
-  self.skipWaiting();
 	installEvent.waitUntil(
 		caches.open(staticfile).then((cache) => {
 			cache.addAll(assets)
