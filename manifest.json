@@ -8,48 +8,48 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/image/32.svg",
+      "src": "/image/32.png",
       "type": "image/png",
       "sizes": "32x32"
     }, 
      {
-      "src": "/image/96.svg",
+      "src": "/image/96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "/image/120.svg",
-      "type": "image",
+      "src": "/image/120.png",
+      "type": "image/png",
       "sizes": "120x120"
     },
     {
-      "src": "/image/128.svg",
+      "src": "/image/128.png",
       "type": "image/png",
       "sizes": "128x128"
     },
     {
-      "src": "./image/144.svg",
+      "src": "./image/144.png",
       "type": "image/png",
       "sizes": "144x144"
     },
     {
-      "src": "/image/152.svg",
+      "src": "/image/152.png",
       "type": "image/png",
       "sizes": "152x152"
     },
     {
-      "src": "/image/180.svg",
-      "type": "image",
+      "src": "/image/180.png",
+      "type": "image/png",
       "sizes": "180x180"
     },
     {
-      "src": "/image/192.svg",
+      "src": "/image/192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/image/384.svg",
-      "type": "image",
+      "src": "/image/384.png",
+      "type": "image/png",
       "sizes": "384x384"
     },
     {
