@@ -1,6 +1,7 @@
 {
   "name": "DP Calculator",
   "short_name": "DP",
+  "scope": "/",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
